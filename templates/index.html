@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admission Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    /* Basic button style */
+    .btn {
+      background-color: #4a77d4;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <h1>Admission Predictor</h1>
+    <!-- Main Input For Receiving Data for Admission Prediction -->
+    <form name="admissionForm" action="{{ url_for('predict') }}" method="post">
+      <input type="number" name="gre_score" placeholder="GRE Score" required="required">
+      <input type="number" name="toefl_score" placeholder="TOEFL Score" required="required">
+      <input type="number" name="university_rating" placeholder="University Rating" required="required">
+      <input type="number" name="sop" placeholder="SOP" required="required">
+      <input type="number" name="lor" placeholder="LOR" required="required">
+      <input type="number" name="cgpa" placeholder="CGPA" required="required">
+      <input type="number" name="research" placeholder="Research (1 for Yes, 0 for No)" required="required">
+      <button type="submit" class="btn">Predict</button>
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+  </div>
+</body>
+</html>
+`

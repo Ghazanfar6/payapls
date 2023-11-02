@@ -1,0 +1,64 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a background color and text color to the body */
+body {
+  background-color: #f5f5f5;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Style the login container */
+.login {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the heading */
+.login h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style the form elements */
+.login form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the submit button */
+.login form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #4a77d4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the result text */
+.login .prediction {
+  margin-top: 20px;
+  font-size: 20px;
+}
